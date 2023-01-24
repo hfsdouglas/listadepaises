@@ -1,0 +1,79 @@
+body 
+    max-width: 1440
+    margin: 0 auto
+    
+h1
+    text-align: center
+
+.countryList 
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+
+    .countryList__ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+
+        .countryCard 
+            border: 1px solid black
+            border-radius: 10px
+            width: 100%
+            max-width: 300px
+            height: 100%
+            max-height: 200px
+            padding: 10px
+            margin: 10px
+            perspective: 1000px
+            background-color: transparent
+
+            &.Africa
+                background-color: lightgreen
+
+            &.Americas 
+                background-color: lightyellow
+
+            &.Asia
+                background-color: #FFCCCB
+
+            &.Europe
+                background-color: lavender
+
+            &.Oceania 
+                background-color: lightblue
+
+            #countryCard__flag 
+                width: 300px
+                height: 200px
+
+            &:hover #countryCard__inner 
+                transform: rotateY(180deg)
+                
+            #countryCard__inner
+                transition: transform 0.8s
+                position: relative
+                text-align: center
+                transform-style: preserve-3d
+                width: 100%
+                height: 100%
+
+                #countryCard__front
+                    position: absolute
+                    backface-visibility: hidden
+                    -webkit-backface-visibility: hidden
+                    width: 100%
+                    height: 100%
+
+                #countryCard__back
+                    position: absolute
+                    backface-visibility: hidden
+                    -webkit-backface-visibility: hidden
+                    width: 100%
+                    height: 100%
+                    transform: rotateY(180deg)
+            
+
+        
